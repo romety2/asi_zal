@@ -1,0 +1,2 @@
+class Trup < ApplicationRecord
+end
