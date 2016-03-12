@@ -1,0 +1,2 @@
+module TrupyHelper
+end

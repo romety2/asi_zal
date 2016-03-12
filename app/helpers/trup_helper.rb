@@ -1,2 +1,0 @@
-module TrupHelper
-end
