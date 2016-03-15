@@ -34,4 +34,8 @@ class CorpsesController < ApplicationController
 		@corpse.destroy
 		redirect_to corpses_path, :notice => "Corpse has been deleted"
 	end
+
+	def show
+		@corpse = Corpse.find(params[:id])
+	end
 end
