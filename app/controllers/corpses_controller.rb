@@ -23,9 +23,15 @@ class CorpsesController < ApplicationController
 	def update
 		@corpse = Corpse.find(params[:id])
 		if @corpse.update_attributes(params.require(:corpse).permit(:first_name, :last_name, :pesel, :date_of_birth, :date_of_death))
-			redirect_to corpses_path, :notice => "Corpse was updated"
+			redirect_to corpses_path, :notice => "Corpse has been updated"
 		else
 			render "edit"
 		end
+	end
+
+	def destroy
+		@corpse = Corpse.find(params[:id])
+		@corpse.destroy
+		redirect_to corpses_path, :notice => "Corpse has been deleted"
 	end
 end

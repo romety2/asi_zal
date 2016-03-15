@@ -2,7 +2,10 @@
 
 <% @corpses.each do |c| %>
 	<h2><%= c.first_name %> <%= c.last_name %> <%= c.pesel %> <%= c.date_of_birth %> <%= c.date_of_death %></h2>
-	<p><%= link_to "Edit", edit_corpse_path(c) %></p>
+	<p>
+		<%= link_to "Edit", edit_corpse_path(c) %>
+		<%= link_to "Delete", c, :data => {:confirm => "Are you sure?"}, :method => :delete %>
+	</p>
 	<hr />
 <% end %>
 
