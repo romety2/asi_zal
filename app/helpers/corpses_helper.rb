@@ -1,0 +1,2 @@
+module CorpsesHelper
+end

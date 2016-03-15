@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TrupyControllerTest < ActionDispatch::IntegrationTest
+class CorpseTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TrupTest < ActiveSupport::TestCase
+class CorpsesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

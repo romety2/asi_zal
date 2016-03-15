@@ -11,14 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160312193930) do
+ActiveRecord::Schema.define(version: 20160315184746) do
 
-  create_table "trups", force: :cascade do |t|
+  create_table "corpses", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "pesel"
+    t.string   "date_of_birth"
+    t.string   "date_of_death"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "trupy", force: :cascade do |t|
     t.string   "imie"
     t.string   "nazwisko"
     t.string   "pesel"
-    t.date     "data_urodzenia"
-    t.date     "data_smierci"
+    t.string   "data_urodzenia"
+    t.string   "data_smierci"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end

@@ -1,0 +1,8 @@
+<h1>Corpses</h1>
+
+<% @corpses.each do |c| %>
+	<h2><%= c.first_name %></h2>
+	<hr />
+<% end %>
+
+<p><%= link_to "Add", new_corpse_path %></p>
