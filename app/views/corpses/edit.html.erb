@@ -1,0 +1,27 @@
+<h1>Edit corpse</h1>
+
+<%= form_for @corpse do |f| %>
+	<p>
+		<%= f.label :first_name %><br />
+		<%= f.text_field :first_name %>
+	</p>
+	<p>
+		<%= f.label :last_name %><br />
+		<%= f.text_field :last_name %>
+	</p>
+	<p>
+		<%= f.label :pesel %><br />
+		<%= f.text_field :pesel %>
+	</p>
+	<p>
+		<%= f.label :date_of_birth %><br />
+		<%= f.text_field :date_of_birth %>
+	</p>
+	<p>
+		<%= f.label :date_of_death %><br />
+		<%= f.text_field :date_of_death %>
+	</p>
+	<p>
+		<%= f.submit "Save" %>
+	</p>
+<% end %>

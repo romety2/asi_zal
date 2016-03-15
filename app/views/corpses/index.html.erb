@@ -1,7 +1,8 @@
 <h1>Corpses</h1>
 
 <% @corpses.each do |c| %>
-	<h2><%= c.first_name %></h2>
+	<h2><%= c.first_name %> <%= c.last_name %> <%= c.pesel %> <%= c.date_of_birth %> <%= c.date_of_death %></h2>
+	<p><%= link_to "Edit", edit_corpse_path(c) %></p>
 	<hr />
 <% end %>
 
