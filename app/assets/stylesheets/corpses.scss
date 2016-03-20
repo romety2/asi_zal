@@ -1,8 +1,13 @@
 // Place all the styles related to the corpses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body{
+ background-image: image-url("skull.jpg");
+}
 
 .btn-circle {
   width: 30px;
@@ -77,7 +82,7 @@
     background: #E6E6FA;
     color: #DC143C;
     padding: 0;
-    width: auto;
+    width: 30%;
     margin: auto;
     text-align: center;
     p

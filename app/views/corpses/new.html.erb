@@ -1,27 +1,47 @@
-<h1>Add new corpse</h1>
+<h1 class="text-center">Add new corpse</h1>
 
-<%= form_for @corpse do |f| %>
-	<p>
-		<%= f.label :first_name %><br />
-		<%= f.text_field :first_name %>
-	</p>
-	<p>
-		<%= f.label :last_name %><br />
-		<%= f.text_field :last_name %>
-	</p>
-	<p>
-		<%= f.label :pesel %><br />
-		<%= f.text_field :pesel %>
-	</p>
-	<p>
-		<%= f.label :date_of_birth %><br />
-		<%= f.text_field :date_of_birth %>
-	</p>
-	<p>
-		<%= f.label :date_of_death %><br />
-		<%= f.text_field :date_of_death %>
-	</p>
-	<p>
-		<%= f.submit "Save" %>
-	</p>
-<% end %>
+<div class="container">
+	<%= form_for @corpse do |f| %>
+		<div class="form-group">
+			<%= f.label :first_name, class: "col-sm-2 control-label" %>
+			<div class="col-sm-10">
+				<%= f.text_field :first_name, class: "form-control" %>
+				</br>
+			</div>
+		</div>
+		<div class="form-group">
+			<%= f.label :last_name, class: "col-sm-2 control-label" %>
+			<div class="col-sm-10">
+				<%= f.text_field :last_name, class: "form-control" %>
+				</br>
+			</div>
+		</div>
+		<div class="form-group">
+			<%= f.label :pesel, class: "col-sm-2 control-label" %>
+			<div class="col-sm-10">
+				<%= f.text_field :pesel, class: "form-control" %>
+				</br>
+			</div>
+		</div>
+		<div class="form-group">
+			<%= f.label :date_of_birth, class: "col-sm-2 control-label" %>
+			<div class="col-sm-10">
+				<%= f.text_field :date_of_birth, class: "form-control" %>
+				</br>
+			</div>
+		</div>
+		<div class="form-group">
+			<%= f.label :date_of_death, class: "col-sm-2 control-label" %>
+			<div class="col-sm-10">
+				<%= f.text_field :date_of_death, class: "form-control" %>
+				</br>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="text-center">
+				<%= f.submit "OK", class: "btn btn-success btn-circle btn-outline" %>
+				<%= link_to "", corpses_path, class: "btn btn-warning btn-circle btn-outline glyphicon glyphicon-arrow-left" %>
+			</div>
+		</div>
+	<% end %>
+</div>
