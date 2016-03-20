@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyApp</title>
+    <title>Mortuary</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
 
@@ -10,10 +10,17 @@
   </head>
 
   <body>
-    <% flash.each do |key, value| %>
-    	<p><%= value %></p>
-    <% end %>    
-
+    <div class="container">
+	<p>
+    		<%= link_to "", root_path, class: "btn btn-default  btn-outline btn-circle btn-outline glyphicon glyphicon-home" %>
+    		<%= link_to "", corpses_path, class: "btn btn-default  btn-outline btn-circle btn-outline glyphicon glyphicon-th-list" %>
+	</p>
+    	<% flash.each do |key, value| %>
+		<div class="jumbotron statement">
+    			<p><%= value %></p>
+		</div>
+    	<% end %>    
+    </div>
     <%= yield %>
   </body>
 </html>

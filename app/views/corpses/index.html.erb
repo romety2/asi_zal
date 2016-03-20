@@ -1,13 +1,31 @@
-<h1>Corpses</h1>
+<h1 class="text-center">Corpses</h1>
 
-<% @corpses.each do |c| %>
-	<h2><%= c.first_name %> <%= c.last_name %> <%= c.pesel %> <%= c.date_of_birth %> <%= c.date_of_death %></h2>
+<div class="container">
 	<p>
-		<%= link_to "View", c %>
-		<%= link_to "Edit", edit_corpse_path(c) %>
-		<%= link_to "Delete", c, :data => {:confirm => "Are you sure?"}, :method => :delete %>
+		<%= link_to "", new_corpse_path, class: "btn btn-success btn-outline btn-circle btn-outline glyphicon glyphicon-plus" %>
 	</p>
-	<hr />
-<% end %>
-
-<p><%= link_to "Add", new_corpse_path %></p>
+        <table class="table table-striped">
+	<tr>
+		<th>First name</th>
+		<th>Last name</th>
+		<th>Pesel</th>
+		<th>Date of birth</th>
+		<th>Date of death</th>
+		<th></th>
+	</tr>
+	<% @corpses.each do |c| %>
+	<tr>
+		<td><%= c.first_name %></td>
+		<td><%= c.last_name %></td>
+		<td><%= c.pesel %></td>
+		<td><%= c.date_of_birth %></td>
+		<td><%= c.date_of_death %></td>
+		<td>
+			<%= link_to "", c, class: "btn btn-xs btn-info btn-circle btn-outline glyphicon glyphicon-eye-open" %>
+			<%= link_to "", edit_corpse_path(c), class: "btn btn-xs btn-primary btn-circle btn-outline glyphicon glyphicon-pencil" %>
+			<%= link_to "", c, :data => {:confirm => "Are you sure?"}, :method => :delete, class: "btn btn-xs btn-danger btn-circle btn-outline glyphicon glyphicon-remove" %>
+		</td>
+	</tr>
+	<% end %>
+	</table>
+</div>

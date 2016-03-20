@@ -23,14 +23,4 @@ ActiveRecord::Schema.define(version: 20160315184746) do
     t.datetime "updated_at",    null: false
   end
 
-  create_table "trupy", force: :cascade do |t|
-    t.string   "imie"
-    t.string   "nazwisko"
-    t.string   "pesel"
-    t.string   "data_urodzenia"
-    t.string   "data_smierci"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
-
 end
