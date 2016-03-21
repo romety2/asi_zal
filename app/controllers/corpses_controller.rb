@@ -1,6 +1,6 @@
 class CorpsesController < ApplicationController
 	def index 
-		@corpses = Corpse.all
+		@corpses = Corpse.paginate(:page => params[:page], :per_page => 10)
 	end
 	
 	def new

@@ -4,14 +4,14 @@
 	<p>
 		<%= link_to "", new_corpse_path, class: "btn btn-success btn-circle btn-outline glyphicon glyphicon-plus" %>
 	</p>
-        <table class="table table-bordered table-striped">
+        <table class="table table-bordered table-striped text-center table-background">
 	<tr>
-		<th>First name</th>
-		<th>Last name</th>
-		<th>Pesel</th>
-		<th>Date of birth</th>
-		<th>Date of death</th>
-		<th></th>
+		<th class="text-center">First name</th>
+		<th class="text-center">Last name</th>
+		<th class="text-center">Pesel</th>
+		<th class="text-center">Date of birth</th>
+		<th class="text-center">Date of death</th>
+		<th class="text-center"></th>
 	</tr>
 	<% @corpses.each do |c| %>
 	<tr>
@@ -28,4 +28,5 @@
 	</tr>
 	<% end %>
 	</table>
+	<%= will_paginate @corpses, class: "text-center" %>
 </div>
