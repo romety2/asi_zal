@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+500.times do |t|
+    c = Corpse.new
+    c.first_name = Faker::Name.first_name
+    c.last_name = Faker::Name.last_name
+    c.pesel = Faker::Number.number(11)
+    c.date_of_birth = Faker::Date.backward(1000)
+    c.date_of_death = Faker::Date.backward(10)
+    c.save
+end
