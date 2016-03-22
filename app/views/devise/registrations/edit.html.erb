@@ -9,7 +9,7 @@
  		<div class="form-group">
     			<%= f.label :email, class: "col-sm-2 control-label" %>
 			<div class="col-sm-10">
-    				<%= f.email_field :email, autofocus: true, class: "form-control" %>
+    				<%= f.email_field :email, autofocus: true, class: "form-control opacity" %>
 				<br />
 			</div>
   		</div>
@@ -21,7 +21,7 @@
  		<div class="form-group">
     			<%= f.label :password, class: "col-sm-2 control-label" %> <!--<i>(leave blank if you don't want to change it)</i>-->
 			<div class="col-sm-10">
-    				<%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Leave blank if you don't want to change it" %>
+    				<%= f.password_field :password, autocomplete: "off", class: "form-control opacity", placeholder: "Leave blank if you don't want to change it" %>
 				<br />
   			</div>
   		</div>
@@ -29,7 +29,7 @@
   		<div class="form-group">
    			<%= f.label :password_confirmation, class: "col-sm-2 control-label" %>
 			<div class="col-sm-10">
-    				<%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+    				<%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control opacity" %>
 				<br />
 			</div>
 		</div>
@@ -37,19 +37,19 @@
  		<div class="form-group">
     			<%= f.label :current_password, class: "col-sm-2 control-label" %> <!--<i>()</i>-->
 			<div class="col-sm-10">
-    				<%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: "We need your current password to confirm your changes" %>
+    				<%= f.password_field :current_password, autocomplete: "off", class: "form-control opacity", placeholder: "We need your current password to confirm your changes" %>
 				<br />
   			</div>
   		</div>
   	</div>
 
   	<div class="actions text-center">
- 		<%= f.submit "Update", class: "btn btn-default"%>
+ 		<%= f.submit "Update", class: "btn btn-default opacity"%>
   	</div>
 <% end %>
 
 <h3 class="text-center">Delete my account</h3>
 
-<div class="text-center"><!--Unhappy?--> <%= button_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default" %></div>
+<div class="text-center"><!--Unhappy?--> <%= button_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default opacity" %></div>
 
 <!--<%= link_to "Back", :back %>-->
