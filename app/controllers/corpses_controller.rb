@@ -1,10 +1,18 @@
 class CorpsesController < ApplicationController
 	def index 
-		@corpses = Corpse.paginate(:page => params[:page], :per_page => 10)
+		if user_signed_in?
+			@corpses = Corpse.paginate(:page => params[:page], :per_page => 10)
+		else
+			redirect_to new_user_session_path, :notice => "This page is only available to logged-in users"
+		end
 	end
 	
 	def new
-		@corpse = Corpse.new
+		if user_signed_in?
+			@corpse = Corpse.new
+		else
+			redirect_to new_user_session_path, :notice => "This page is only available to logged-in users"
+		end
 	end
 	
 	def create
@@ -17,7 +25,11 @@ class CorpsesController < ApplicationController
 	end
 
 	def edit
-		@corpse = Corpse.find(params[:id])
+		if user_signed_in?
+			@corpse = Corpse.find(params[:id])
+		else
+			redirect_to new_user_session_path, :notice => "This page is only available to logged-in users"
+		end
 	end
 	
 	def update
@@ -30,12 +42,20 @@ class CorpsesController < ApplicationController
 	end
 
 	def destroy
-		@corpse = Corpse.find(params[:id])
-		@corpse.destroy
-		redirect_to corpses_path, :notice => "Corpse has been deleted"
+		if user_signed_in?
+			@corpse = Corpse.find(params[:id])
+			@corpse.destroy
+			redirect_to corpses_path, :notice => "Corpse has been deleted"
+		else
+			redirect_to new_user_session_path, :notice => "This page is only available to logged-in users"
+		end
 	end
 
 	def show
-		@corpse = Corpse.find(params[:id])
+		if user_signed_in?
+			@corpse = Corpse.find(params[:id])
+		else
+			redirect_to new_user_session_path, :notice => "This page is only available to logged-in users"
+		end
 	end
 end

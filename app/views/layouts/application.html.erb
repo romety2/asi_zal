@@ -14,10 +14,19 @@
     		<div class="collapse navbar-collapse">
       			<form class="navbar-form navbar-left none-margin-top-bottom">
     				<%= link_to "", root_path, class: "btn-lg btn-default  btn-outline btn-circle glyphicon glyphicon-home" %>
-    				<%= link_to "", corpses_path, class: "btn-lg btn-default  btn-outline btn-circle glyphicon glyphicon-th-list" %>
+      				<% if user_signed_in? %>
+    					<%= link_to "", corpses_path, class: "btn-lg btn-default  btn-outline btn-circle glyphicon glyphicon-th-list" %>
+        			<% end %>
       			</form>
-      			<ul class="nav navbar-nav navbar-right">
-      			</ul>
+      			<form class="navbar-form navbar-right">
+      			 <% if user_signed_in? %>
+          			<%= link_to 'Edit account', edit_user_registration_path, class: "btn-lg btn-default  btn-outline btn-circle" %>
+          			<%= link_to 'Log out', destroy_user_session_path, :method => :delete, class: "btn-lg btn-default  btn-outline btn-circle" %>
+        		<% else %>
+          			<%= link_to 'Log in', new_user_session_path, class: "btn-lg btn-default  btn-outline btn-circle" %>
+          			<%= link_to 'Sign up', new_user_registration_path, class: "btn-lg btn-default  btn-outline btn-circle" %>
+        		<% end %>
+      			</form>
     		</div>
 	</nav>
     <div class="container">
