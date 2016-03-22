@@ -1,7 +1,11 @@
 class CorpsesController < ApplicationController
 	def index 
 		if user_signed_in?
-			@corpses = Corpse.paginate(:page => params[:page], :per_page => 10)
+			if params[:search]
+				@corpses = Corpse.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
+			else
+				@corpses = Corpse.paginate(:page => params[:page], :per_page => 10)
+			end
 		else
 			redirect_to new_user_session_path, :notice => "This page is only available to logged-in users"
 		end

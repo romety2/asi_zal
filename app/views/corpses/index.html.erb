@@ -2,7 +2,11 @@
 
 <div class="container">
 	<p>
-		<%= link_to "", new_corpse_path, class: "btn btn-success btn-circle btn-outline glyphicon glyphicon-plus" %>
+		<%= form_tag(corpses_path, :method => "get", id: "search-form") do %>
+			<%= link_to "", new_corpse_path, class: "btn btn-success btn-circle btn-outline glyphicon glyphicon-plus" %>
+			<button type="submit" class="navbar-right btn btn-warning btn-circle btn-outline glyphicon glyphicon-search"></button>
+			<%= text_field_tag :search, params[:search],  class: "navbar-right form-control opacity width-search", placeholder: "Search corpse" %>
+		<% end %>
 	</p>
         <table class="table table-bordered table-striped text-center table-background opacity">
 	<tr>
