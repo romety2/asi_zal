@@ -8,6 +8,23 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
     <meta http-equiv="no-cache"> 
+	<script>
+		$(document).on('mousemove', document, function()
+		{
+			$('#corpse_date_of_birth').datepicker(
+			{
+				changeMonth: true,
+				changeYear: true,
+				dateFormat: 'yy-mm-dd'
+			});
+			$('#corpse_date_of_death').datepicker(
+			{
+				changeMonth: true,
+				changeYear: true,
+				dateFormat: 'yy-mm-dd'
+			});
+		});
+	</script>
   </head>
 
   <body>
