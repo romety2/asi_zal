@@ -115,3 +115,79 @@ body{
 .width-search{
         width: 30%;
 }
+
+.my-pagination a{
+        border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	border-radius: 25px;
+	font-weight: bold;
+	padding-left: 1%;
+	padding-right: 1%;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+	text-decoration: none;
+	color: #4169E1;
+        opacity: 0.85;
+}
+
+.my-pagination span{
+        border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	border-radius: 25px;
+	font-weight: bold;
+	padding-left: 1%;
+	padding-right: 1%;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+	text-decoration: none;
+    	background: #A9A9A9;
+        opacity: 0.85;
+}
+
+.my-pagination em{
+        border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	border-radius: 25px;
+	font-weight: bold;
+	padding-left: 1%;
+	padding-right: 1%;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+	text-decoration: none;
+    	background: #A9A9A9;
+        opacity: 0.85;
+}
+
+.my-pagination .gap{
+        border-style: none;
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 0.25%;
+	margin-right: 0.25%;
+	text-decoration: none;
+    	background: none;
+        opacity: 0.85;
+}
+
+.my-pagination .current{
+	font-style: normal;
+}
+
+.my-pagination a:link {
+    	background: #F8F8FF;
+}
+
+.my-pagination a:visited {
+    	background: #F8F8FF;
+}
+
+.my-pagination a:hover {
+    	background: #D3D3D3;
+}
+
+.my-pagination a:active {
+    	background: #D3D3D3;
+}
