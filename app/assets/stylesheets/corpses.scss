@@ -116,6 +116,22 @@ body{
         width: 30%;
 }
 
+.none-underline:link {
+	text-decoration: none;
+}
+
+.none-underline:visited {
+	text-decoration: none;
+}
+
+.none-underline:hover {
+	text-decoration: none;
+}
+
+.none-underline:active {
+	text-decoration: none;
+}
+
 .my-pagination a{
         border-style: solid;
 	border-width: 1px;

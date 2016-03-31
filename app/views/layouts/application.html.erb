@@ -31,18 +31,18 @@
 	<nav class="navbar navbar-default">
     		<div class="collapse navbar-collapse">
       			<form class="navbar-form navbar-left none-margin-top-bottom">
-    				<%= link_to "", root_path, class: "btn-lg btn-default  btn-outline btn-circle glyphicon glyphicon-home" %>
+    				<%= link_to "", root_path, class: "btn-lg btn-default  btn-outline btn-circle glyphicon glyphicon-home none-underline" %>
       				<% if user_signed_in? %>
-    					<%= link_to "", corpses_path, class: "btn-lg btn-default  btn-outline btn-circle glyphicon glyphicon-th-list" %>
+    					<%= link_to "", corpses_path, class: "btn-lg btn-default  btn-outline btn-circle glyphicon glyphicon-th-list none-underline" %>
         			<% end %>
       			</form>
       			<form class="navbar-form navbar-right">
       			 <% if user_signed_in? %>
-          			<%= link_to 'Edit account', edit_user_registration_path, class: "btn-lg btn-default  btn-outline btn-circle" %>
-          			<%= link_to 'Log out', destroy_user_session_path, :method => :delete, class: "btn-lg btn-default  btn-outline btn-circle" %>
+          			<%= link_to 'Edit account', edit_user_registration_path, class: "btn-lg btn-default  btn-outline btn-circle none-underline" %>
+          			<%= link_to 'Log out', destroy_user_session_path, :method => :delete, class: "btn-lg btn-default  btn-outline btn-circle none-underline" %>
         		<% else %>
-          			<%= link_to 'Log in', new_user_session_path, class: "btn-lg btn-default  btn-outline btn-circle" %>
-          			<%= link_to 'Sign up', new_user_registration_path, class: "btn-lg btn-default  btn-outline btn-circle" %>
+          			<%= link_to 'Log in', new_user_session_path, class: "btn-lg btn-default  btn-outline btn-circle none-underline" %>
+          			<%= link_to 'Sign up', new_user_registration_path, class: "btn-lg btn-default  btn-outline btn-circle none-underline" %>
         		<% end %>
       			</form>
     		</div>
